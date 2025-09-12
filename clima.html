@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portal Interativo — Clima</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body data-page="clima">
+  <header class="topbar">
+    <div class="brand">⚡ Portal Interativo</div>
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="clima.html" class="active">Clima</a>
+      <a href="noticias.html">Notícias</a>
+      <a href="videos.html">Vídeos</a>
+      <a href="imagens.html">Imagens</a>
+      <a href="chat.html">Chat</a>
+    </nav>
+    <div class="right">
+      <input id="globalSearch" placeholder="Buscar..." />
+      <button id="themeToggle" class="pill">Tema</button>
+      <button id="openAuth" class="pill">Entrar</button>
+      <div id="userBadge" class="user-badge hidden"><span id="usernameLabel"></span><button id="logoutBtn">⎋</button></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Clima em tempo real</h2>
+      <div class="controls">
+        <input id="cityInput" placeholder="Digite cidade (ex: São Paulo)" />
+        <button id="searchCity" class="primary">Buscar</button>
+        <button id="useGeo" class="primary">📍 Usar minha localização</button>
+        <label class="muted">Atualiza a cada 60s</label>
+      </div>
+
+      <div id="weatherPanel" class="panel-inner">
+        <div class="loading">Aguardando ação...</div>
+      </div>
+
+      <h3 style="margin-top:18px">Gráfico de temperatura (últimas 24h)</h3>
+      <canvas id="tempChart" style="height:240px"></canvas>
+    </section>
+  </main>
+
+  <footer class="foot"><div>© 2025 Portal Interativo — Clima (Open-Meteo)</div></footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portal Interativo — Vídeos</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body data-page="videos">
+  <header class="topbar">
+    <div class="brand">⚡ Portal Interativo</div>
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="clima.html">Clima</a>
+      <a href="noticias.html">Notícias</a>
+      <a href="videos.html" class="active">Vídeos</a>
+      <a href="imagens.html">Imagens</a>
+      <a href="chat.html">Chat</a>
+    </nav>
+    <div class="right">
+      <input id="globalSearch" placeholder="Buscar..." />
+      <button id="themeToggle" class="pill">Tema</button>
+      <button id="openAuth" class="pill">Entrar</button>
+      <div id="userBadge" class="user-badge hidden"><span id="usernameLabel"></span><button id="logoutBtn">⎋</button></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Vídeos (NASA Library)</h2>
+      <div class="controls">
+        <input id="videoQuery" placeholder="Ex: moon, mars, aurora..." />
+        <button id="videoSearch" class="primary">Buscar vídeos</button>
+        <div class="muted">Página: <span id="videoPage">1</span></div>
+      </div>
+
+      <div id="videosGrid" class="videos-grid loading">Carregando vídeos...</div>
+
+      <div class="pager">
+        <button id="videoPrev">Anterior</button>
+        <button id="videoNext" class="primary">Próxima</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot"><div>© 2025 Portal Interativo — Vídeos</div></footer>
+</body>
+</html>

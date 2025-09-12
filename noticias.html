@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portal Interativo — Notícias</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body data-page="noticias">
+  <header class="topbar">
+    <div class="brand">⚡ Portal Interativo</div>
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="clima.html">Clima</a>
+      <a href="noticias.html" class="active">Notícias</a>
+      <a href="videos.html">Vídeos</a>
+      <a href="imagens.html">Imagens</a>
+      <a href="chat.html">Chat</a>
+    </nav>
+    <div class="right">
+      <input id="globalSearch" placeholder="Buscar..." />
+      <button id="themeToggle" class="pill">Tema</button>
+      <button id="openAuth" class="pill">Entrar</button>
+      <div id="userBadge" class="user-badge hidden"><span id="usernameLabel"></span><button id="logoutBtn">⎋</button></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Notícias (Spaceflight News)</h2>
+      <div class="controls">
+        <select id="newsCategory">
+          <option value="">Todas</option>
+          <option value="space">Espaço</option>
+          <option value="tech">Tech</option>
+          <option value="science">Science</option>
+        </select>
+        <input id="newsQuery" placeholder="Buscar notícias..." />
+        <button id="newsSearch" class="primary">Buscar</button>
+        <div class="muted">Página: <span id="newsPage">1</span></div>
+      </div>
+
+      <div id="newsGrid" class="news-grid loading">Carregando notícias...</div>
+
+      <div class="pager">
+        <button id="newsPrev">Anterior</button>
+        <button id="newsNext" class="primary">Próxima</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot"><div>© 2025 Portal Interativo — Notícias</div></footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portal Interativo — Imagens</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body data-page="imagens">
+  <header class="topbar">
+    <div class="brand">⚡ Portal Interativo</div>
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="clima.html">Clima</a>
+      <a href="noticias.html">Notícias</a>
+      <a href="videos.html">Vídeos</a>
+      <a href="imagens.html" class="active">Imagens</a>
+      <a href="chat.html">Chat</a>
+    </nav>
+    <div class="right">
+      <input id="globalSearch" placeholder="Buscar..." />
+      <button id="themeToggle" class="pill">Tema</button>
+      <button id="openAuth" class="pill">Entrar</button>
+      <div id="userBadge" class="user-badge hidden"><span id="usernameLabel"></span><button id="logoutBtn">⎋</button></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Galeria (Picsum)</h2>
+      <div class="controls">
+        <button id="reloadImages" class="primary">Recarregar</button>
+        <label class="muted">Scroll infinito</label>
+      </div>
+
+      <div id="imagesMasonry" class="masonry loading">Carregando imagens...</div>
+    </section>
+  </main>
+
+  <footer class="foot"><div>© 2025 Portal Interativo — Imagens</div></footer>
+</body>
+</html>

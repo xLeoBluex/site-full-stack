@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portal Interativo — Login</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="login">
+  <header class="topbar">
+    <div class="brand">⚡ Portal Interativo</div>
+    <nav class="menu"><a href="index.html">Início</a><a href="clima.html">Clima</a><a href="noticias.html">Notícias</a></nav>
+  </header>
+
+  <main class="container">
+    <section class="panel auth-panel">
+      <h2>Entrar</h2>
+      <form id="loginForm">
+        <label>Usuário<input id="loginUser" required></label>
+        <label>Senha<input id="loginPass" type="password" required></label>
+        <div class="row">
+          <button type="submit" class="primary">Entrar</button>
+          <a href="cadastro.html" class="pill alt">Cadastrar</a>
+        </div>
+      </form>
+      <div id="loginMsg" class="muted"></div>
+    </section>
+  </main>
+
+  <footer class="foot"><div>© 2025 Portal Interativo — Login</div></footer>
+</body>
+</html>

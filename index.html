@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portal Interativo — Home</title>
+  <link rel="stylesheet" href="estilos.css">
+  <!-- Libs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body data-page="index">
+  <header class="topbar">
+    <div class="brand">⚡ Portal Interativo</div>
+    <nav class="menu">
+      <a href="index.html" class="active">Início</a>
+      <a href="clima.html">Clima</a>
+      <a href="noticias.html">Notícias</a>
+      <a href="videos.html">Vídeos</a>
+      <a href="imagens.html">Imagens</a>
+      <a href="chat.html">Chat</a>
+    </nav>
+    <div class="right">
+      <input id="globalSearch" placeholder="Buscar..." />
+      <button id="themeToggle" class="pill">Tema</button>
+      <button id="openAuth" class="pill">Entrar</button>
+      <div id="userBadge" class="user-badge hidden">
+        <span id="usernameLabel"></span>
+        <button id="logoutBtn" title="Sair">⎋</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Portal Interativo — Tudo num só lugar</h1>
+      <p>Clima em tempo real, notícias, vídeos, imagens, chat e área do usuário — carregado intensamente para testes.</p>
+      <div class="hero-ctas">
+        <a class="cta" href="clima.html">Ver Clima</a>
+        <a class="cta alt" href="noticias.html">Ver Notícias</a>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <div class="card large" id="homeWeatherCard">
+        <h3>Clima agora</h3>
+        <div id="homeWeatherContent" class="loading">Obtendo localização...</div>
+        <canvas id="homeTempChart" style="height:140px;margin-top:12px"></canvas>
+      </div>
+
+      <div class="card">
+        <h3>Últimas notícias</h3>
+        <ul id="homeNewsList" class="list loading">Carregando...</ul>
+        <div style="margin-top:8px"><a href="noticias.html" class="link">Mais notícias →</a></div>
+      </div>
+
+      <div class="card">
+        <h3>Vídeos em destaque</h3>
+        <div class="swiper videos-swiper">
+          <div class="swiper-wrapper" id="homeVideosSlider"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div style="margin-top:8px"><a href="videos.html" class="link">Todos os vídeos →</a></div>
+      </div>
+
+      <div class="card">
+        <h3>Galeria</h3>
+        <div id="homeImgsPreview" class="masonry-preview loading">Carregando imagens...</div>
+        <div style="margin-top:8px"><a href="imagens.html" class="link">Abrir galeria →</a></div>
+      </div>
+
+      <div class="card">
+        <h3>Chat rápido</h3>
+        <div id="homeChatPreview" class="chat-preview">
+          <div class="muted">Abra o chat para testar mensagens em tempo real.</div>
+          <a href="chat.html" class="link">Ir para chat →</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Área do Usuário</h3>
+        <div id="homeUserPanel">
+          <div class="muted">Entre para salvar favoritos e ver seu perfil.</div>
+          <div style="margin-top:8px">
+            <a href="login.html" class="pill">Entrar</a>
+            <a href="cadastro.html" class="pill alt">Cadastrar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div>© 2025 Portal Interativo — Demo pesada com APIs públicas. Rode em servidor local.</div>
+  </footer>
+</body>
+</html>

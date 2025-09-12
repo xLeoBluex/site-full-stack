@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portal Interativo — Chat</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body data-page="chat">
+  <header class="topbar">
+    <div class="brand">⚡ Portal Interativo</div>
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="clima.html">Clima</a>
+      <a href="noticias.html">Notícias</a>
+      <a href="videos.html">Vídeos</a>
+      <a href="imagens.html">Imagens</a>
+      <a href="chat.html" class="active">Chat</a>
+    </nav>
+    <div class="right">
+      <input id="globalSearch" placeholder="Buscar..." />
+      <button id="themeToggle" class="pill">Tema</button>
+      <button id="openAuth" class="pill">Entrar</button>
+      <div id="userBadge" class="user-badge hidden"><span id="usernameLabel"></span><button id="logoutBtn">⎋</button></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Chat em tempo real (Echo)</h2>
+      <div class="chatbox">
+        <div id="chatLog" class="chatlog"></div>
+        <form id="chatForm" class="chatform">
+          <input id="chatInput" placeholder="Digite sua mensagem..." autocomplete="off" />
+          <button class="primary">Enviar</button>
+        </form>
+        <div id="chatStatus" class="muted">Conectando...</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot"><div>© 2025 Portal Interativo — Chat</div></footer>
+</body>
+</html>
